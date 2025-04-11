@@ -1,9 +1,9 @@
 const path = require('node:path')
 
 const buildEslintCommand = (filenames) =>
-  `eslint --fix --file ${filenames
+  `eslint --fix  ${filenames
     .map((f) => path.relative(process.cwd(), f))
-    .join(' --file ')}`
+    .join(' ')}`
 
 const buildPrettierCommand = (filenames) =>
   `prettier --write ${filenames.join(' ')}`
