@@ -20,5 +20,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["./*.config.ts", "./scripts/*.ts"]
+  "include": ["./*.config.ts", "./scripts/*.ts", "./mock/**/*.mock.ts"]
 }
