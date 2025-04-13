@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import { NavLink, Outlet } from 'react-router'
 import './App.css'
 
@@ -5,9 +6,11 @@ function App() {
   return (
     <div className="min-h-screen flex flex-col">
       <main className="flex flex-col flex-1">
-        <Outlet />
+        <Suspense fallback={<div className="text-center p-4">Loading...</div>}>
+          <Outlet />
+        </Suspense>
       </main>
-      <footer className="flex flex-row justify-between items-center min-h-[48px]">
+      <footer className="flex flex-row justify-between items-center min-h-[48px] p-4">
         <div className="flex-1">
           <NavLink
             to="/"
