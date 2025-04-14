@@ -9,7 +9,7 @@ export const getCurrencies = async () => {
   return res.json() as Promise<CryptocurrencyResponse>
 }
 
-export const getExchangeRates = async () => {
+export const getCurrencyTiers = async () => {
   const res = await fetch('/api/wallet/tiers')
   return res.json() as Promise<ExchangeRateResponse>
 }

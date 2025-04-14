@@ -1,3 +1,5 @@
+import Decimal from 'decimal.js'
+
 /**
  * Type-safe currency code representation
  * @note Extend with all supported currency codes
@@ -243,4 +245,10 @@ export interface CurrencyBalance {
    * - String representation recommended for precise values
    */
   amount: number
+}
+
+export interface WalletDisplayInfo {
+  currencyInfo: Cryptocurrency
+  amount: number
+  usdValue: Decimal
 }
