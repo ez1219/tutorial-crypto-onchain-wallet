@@ -4,13 +4,13 @@ import './App.css'
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen md:max-w-3xl md:mx-auto  flex flex-col">
       <main className="flex flex-col flex-1">
         <Suspense fallback={<div className="text-center p-4">Loading...</div>}>
           <Outlet />
         </Suspense>
       </main>
-      <footer className="flex flex-row justify-between items-center min-h-[48px] p-4">
+      <footer className="flex flex-row justify-between items-center min-h-[48px] p-4 border-t border-gray-200">
         <div className="flex-1">
           <NavLink
             to="/"

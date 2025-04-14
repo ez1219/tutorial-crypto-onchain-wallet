@@ -20,6 +20,7 @@
   "devDependencies": {
     "@eslint/js": "^9.21.0",
     "@iconify-json/ion": "^1.2.2",
+    "@iconify-json/token": "^1.2.16",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react": "^4.3.4",
