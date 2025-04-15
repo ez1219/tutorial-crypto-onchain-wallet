@@ -44,8 +44,7 @@ const WalletDashboard: React.FC = () => {
         if (!walletRes.ok) {
           throw new Error('Failed to fetch wallet balance')
         }
-
-        // 解构各个响应中的数据
+        // Deconstruct the data in each response
         const originSupportedCurrencies: Cryptocurrency[] =
           currenciesRes.currencies
         const currencyTiers: CurrencyTier[] = tiersRes.tiers
