@@ -10,7 +10,7 @@ function App() {
           <Outlet />
         </Suspense>
       </main>
-      <footer className="flex flex-row justify-between items-center min-h-[48px] p-4 border-t border-gray-200">
+      <footer className="flex flex-row justify-between items-center min-h-[48px] p-4 shadow-lg">
         <div className="flex-1">
           <NavLink
             to="/"
