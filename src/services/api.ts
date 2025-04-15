@@ -5,7 +5,7 @@ import {
 } from '../types'
 
 export const getCurrencies = async () => {
-  const res = await fetch('/api/wallet/currenies')
+  const res = await fetch('/api/wallet/currencies')
   return res.json() as Promise<CryptocurrencyResponse>
 }
 

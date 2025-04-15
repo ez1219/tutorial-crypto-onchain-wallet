@@ -1,10 +1,6 @@
 import Decimal from 'decimal.js'
 import { expect, test } from 'vitest'
-import { convertToUSD, isRateValid, sum } from '.'
-
-test('adds 1 + 2 to equal 3', () => {
-  expect(sum(1, 2)).toBe(3)
-})
+import { convertToUSD, isRateValid } from '.'
 
 test('Exchange rate validity verification - Add 5-minute expiration check', () => {
   expect(

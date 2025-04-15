@@ -5,7 +5,7 @@ import './App.css'
 function App() {
   return (
     <div className="min-h-screen md:max-w-3xl md:mx-auto  flex flex-col">
-      <main className="flex flex-col flex-1">
+      <main className="flex flex-col flex-1  overflow-y-auto">
         <Suspense fallback={<div className="text-center p-4">Loading...</div>}>
           <Outlet />
         </Suspense>

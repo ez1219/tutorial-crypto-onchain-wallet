@@ -7,10 +7,6 @@ import {
   WalletDisplayInfo,
 } from '../types'
 
-export function sum(a: number, b: number): number {
-  return a + b
-}
-
 /**
  * Exchange rate validity verification - Add 5-minute expiration check
  * @param rate
