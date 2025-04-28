@@ -1,5 +1,5 @@
 import Decimal from 'decimal.js'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import WalletCurrencyList from '../components/WalletCurrencyList.tsx'
 import WalletTotalBalance from '../components/WalletTotalBalance.tsx'
 import {
@@ -23,7 +23,10 @@ const WalletDashboard: React.FC = () => {
   const [error, setError] = useState<string | null>(null)
   const [totalUSD, setTotalUSD] = useState('0')
 
+  const isMounted = useRef(false)
+
   useEffect(() => {
+    isMounted.current = true
     const fetchData = async () => {
       setLoading(true)
       try {
@@ -60,8 +63,10 @@ const WalletDashboard: React.FC = () => {
           .reduce((prev, curr) => prev.plus(curr.usdValue), new Decimal(0))
           .toFixed(2)
 
-        setTotalUSD(totalBalance)
-        setWalletDisplayInfoList(balanceList)
+        if (isMounted.current) {
+          setTotalUSD(totalBalance)
+          setWalletDisplayInfoList(balanceList)
+        }
       } catch (err) {
         console.error('Error fetching data:', err)
         setError((err as Error).message || 'Failed to fetch data')
@@ -71,6 +76,10 @@ const WalletDashboard: React.FC = () => {
     }
 
     void fetchData()
+
+    return () => {
+      isMounted.current = false
+    }
   }, [])
 
   if (loading) {
