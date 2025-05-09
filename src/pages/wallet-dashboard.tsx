@@ -15,7 +15,7 @@ const FETCH_START = 'FETCH_START'
 const FETCH_SUCCESS = 'FETCH_SUCCESS'
 const FETCH_ERROR = 'FETCH_ERROR'
 
-// 定义 reducer 和初始状态
+// Define reducer and initial state
 interface State {
   walletDisplayInfoList: WalletDisplayInfo[]
   loading: boolean
